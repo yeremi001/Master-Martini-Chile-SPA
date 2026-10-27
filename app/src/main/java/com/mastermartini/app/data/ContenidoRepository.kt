@@ -41,7 +41,18 @@ object ContenidoRepository {
             TipoContenido.CURSO, Categoria.CHOCOLATERIA, "6 clases", "Avanzado",
             "Bombones y rellenos", "Moldeado", "Conservación y costos"),
         c(4, "Torta de vitrina: bizcocho y relleno",
-            "Receta base de pastelería de vitrina con bizcocho húmedo y relleno estable.",
+            "Receta base de pastelería de vitrina con bizcocho húmedo y relleno estable.\n\n" +
+                    "Ingredientes - Bizcocho:\n" +
+                    "• 4 huevos\n" +
+                    "• 200g de azúcar\n" +
+                    "• 200g de harina\n" +
+                    "• 100ml de leche\n" +
+                    "• 80ml de aceite\n" +
+                    "• 1 cucharada de polvo de hornear\n\n" +
+                    "Ingredientes - Relleno:\n" +
+                    "• 500ml de crema de leche\n" +
+                    "• 200g de dulce de leche\n" +
+                    "• Mermelada al gusto",
             TipoContenido.RECETA, Categoria.PASTELERIA_VITRINA, "45 min", "Intermedio",
             "Bizcocho base", "Relleno estable", "Decoración simple"),
         c(5, "Montaje y conservación de vitrina",
@@ -49,7 +60,14 @@ object ContenidoRepository {
             TipoContenido.VIDEO, Categoria.PASTELERIA_VITRINA, "10 min", "Básico",
             "Orden visual", "Temperaturas de exhibición", "Rotación de productos"),
         c(6, "Base de helado artesanal",
-            "Receta de base cremosa para helados, con variantes de sabores.",
+            "Receta de base cremosa para helados, con variantes de sabores.\n\n" +
+                    "Ingredientes:\n" +
+                    "• 500ml de crema de leche\n" +
+                    "• 250ml de leche entera\n" +
+                    "• 150g de azúcar\n" +
+                    "• 5 yemas de huevo\n" +
+                    "• 1 cucharada de extracto de vainilla\n" +
+                    "• 10g de estabilizante (opcional)",
             TipoContenido.RECETA, Categoria.HELADERIA, "40 min", "Intermedio",
             "Equilibrio de ingredientes", "Maduración de la base", "Variantes de sabor"),
         c(7, "Curso de heladería para emprendedores",
@@ -61,15 +79,38 @@ object ContenidoRepository {
             TipoContenido.VIDEO, Categoria.BOLLERIA, "18 min", "Avanzado",
             "Laminado", "Fermentación controlada", "Horneado"),
         c(9, "Masa de hojaldre rápida",
-            "Receta práctica de masa de hoja para preparaciones dulces y saladas.",
+            "Receta práctica de masa de hoja para preparaciones dulces y saladas.\n\n" +
+                    "Ingredientes:\n" +
+                    "• 250g de harina\n" +
+                    "• 125g de mantequilla fría cortada en cubos\n" +
+                    "• 75ml de agua fría\n" +
+                    "• 5g de sal\n" +
+                    "• 15ml de vinagre blanco",
             TipoContenido.RECETA, Categoria.MASAS_HOJA, "35 min", "Intermedio",
             "Dobleces", "Reposo de la masa", "Usos de la masa"),
         c(10, "Galletas de mantequilla para vender",
-            "Receta de galletas con buen rendimiento para pequeños negocios.",
+            "Receta de galletas con buen rendimiento para pequeños negocios.\n\n" +
+                    "Ingredientes:\n" +
+                    "• 200g de mantequilla\n" +
+                    "• 120g de azúcar\n" +
+                    "• 280g de harina de trigo\n" +
+                    "• 1 cucharada de esencia de vainilla",
             TipoContenido.RECETA, Categoria.GALLETAS, "30 min", "Básico",
             "Mezcla y reposo", "Cortes uniformes", "Envasado"),
-        c(11, "Empanadas de horno: masa y pino",
-            "Receta clásica de empanadas de horno con masa resistente y relleno jugoso.",
+        c(11, "Empanadas de pino al horno",
+            "Receta clásica de empanadas de horno con masa resistente y relleno jugoso.\n\n" +
+                    "Ingredientes - Masa:\n" +
+                    "• 500g de harina\n" +
+                    "• 1 cucharada de sal\n" +
+                    "• 1 huevo\n" +
+                    "• 150g de mantequilla\n" +
+                    "• Agua tibia\n\n" +
+                    "Ingredientes - Relleno:\n" +
+                    "• 500g de carne molida\n" +
+                    "• 2 cebollas en corte pluma\n" +
+                    "• 2 huevos duros picados\n" +
+                    "• 100g de aceitunas negras picadas\n" +
+                    "• Comino y orégano al gusto",
             TipoContenido.RECETA, Categoria.EMPANADAS, "60 min", "Intermedio",
             "Masa para armar", "Relleno de pino", "Repulgue y horneado"),
         c(12, "Curso de productos de horneo",
@@ -84,9 +125,9 @@ object ContenidoRepository {
         val q = texto.trim()
         return todos.filter { c ->
             (tipo == null || c.tipo == tipo) &&
-                (q.isEmpty() ||
-                    c.titulo.contains(q, ignoreCase = true) ||
-                    c.categoria.etiqueta.contains(q, ignoreCase = true))
+                    (q.isEmpty() ||
+                            c.titulo.contains(q, ignoreCase = true) ||
+                            c.categoria.etiqueta.contains(q, ignoreCase = true))
         }
     }
 }
