@@ -1,4 +1,4 @@
-# Master Martini Academia - MVP movil (DSY1105 · Evaluacion Parcial 2)
+# Master Martini Academia - MVP movil
 
 Prototipo academico de una plataforma movil de recetas, videos tecnicos y cursos para clientes y prospectos de Master Martini Chile SPA (comercializadora de insumos para alimentos). Desarrollado en Kotlin + Jetpack Compose + Material 3 con arquitectura MVVM.
 
@@ -13,7 +13,7 @@ Prototipo academico de una plataforma movil de recetas, videos tecnicos y cursos
 | Yeremi Vásquez | Lead UI/UX Developer & Accessibility Specialist |
 | Benjamín Salas | Backend & Data Architecture Lead |
 
-**Equipo N.º:** (completar) · **Asignatura:** DSY1105 Desarrollo de Aplicaciones Moviles · **Docente:** (completar)
+**Equipo N.º:** 11 · **Asignatura:** DSY1105 Desarrollo de Aplicaciones Móviles · **Docente:** Diego Cares
 
 ---
 
