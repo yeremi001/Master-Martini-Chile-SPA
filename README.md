@@ -51,3 +51,20 @@ Master Martini difunde hoy sus videos por WhatsApp y YouTube, sin constancia ni 
 | **IE 2.3.1** Modularidad + persistencia local | Carpetas MVVM, `data/UserRepository.kt` (DataStore Preferences) |
 | **IE 2.3.2** GitHub y Trello | Archivo `docs/ENTREGA.md` |
 | **IE 2.4.1** Dos recursos nativos | Camara (permiso + FileProvider)
+
+---
+
+## Estructura del proyecto
+
+```text
+app/src/main/java/com/mastermartini/app
+├── model/        Modelos y enums (Contenido, Perfil, Categoria...)
+├── data/         ContenidoRepository (datos simulados) y UserRepository (DataStore)
+├── viewmodel/    AppViewModel, LoginViewModel, RegistroViewModel, ContenidoViewModel
+├── navigation/   Screen (rutas tipadas) y AppNavigation (NavHost)
+├── util/         Validadores (logica de validacion) y Seguridad (hash)
+└── ui/
+    ├── theme/        Tema Material 3 + modo texto grande
+    ├── components/   CampoTexto, ImagenInteligente, ContenidoCard, MainScaffold
+    ├── screens/      Splash, Login, Registro, Encuesta, Home, Detalle, Favoritos, Perfil
+    └── utils/        WindowSizeUtils
