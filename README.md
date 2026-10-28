@@ -40,20 +40,6 @@ Master Martini difunde hoy sus videos por WhatsApp y YouTube, sin constancia ni 
 
 ---
 
-## Cumplimiento de la rubrica
-
-| Indicador | Donde se evidencia |
-|---|---|
-| **IE 2.1.1** Interfaz coherente y navegacion | `ui/screens`, `ui/components/MainScaffold.kt`, `navigation/` |
-| **IE 2.1.2** Formularios con validacion visual | `LoginScreen`, `RegistroScreen`, `EncuestaScreen`, `ui/components/CampoTexto.kt` |
-| **IE 2.2.1** Validacion desacoplada de la UI | `util/Validadores.kt`, `viewmodel/*ViewModel.kt` (+ tests unitarios) |
-| **IE 2.2.2** Animaciones funcionales | Revisar seccion de animaciones implementadas |
-| **IE 2.3.1** Modularidad + persistencia local | Carpetas MVVM, `data/UserRepository.kt` (DataStore Preferences) |
-| **IE 2.3.2** GitHub y Trello | Archivo `docs/ENTREGA.md` |
-| **IE 2.4.1** Dos recursos nativos | Camara (permiso + FileProvider)
-
----
-
 ## Estructura del proyecto
 
 ```text
@@ -68,3 +54,11 @@ app/src/main/java/com/mastermartini/app
     ├── components/   CampoTexto, ImagenInteligente, ContenidoCard, MainScaffold
     ├── screens/      Splash, Login, Registro, Encuesta, Home, Detalle, Favoritos, Perfil
     └── utils/        WindowSizeUtils
+
+---
+
+## Notas del MVP
+
+-Existe una sola cuenta local por dispositivo (persistida con DataStore); la contrasena se almacena utilizando un hash SHA-256.
+-Los colores y el logo son provisionales a la espera de la identidad corporativa autorizada.
+-Los videos tecnicos no estan incluidos (material pendiente de autorizacion); el catalogo los despliega como contenido simulado.
